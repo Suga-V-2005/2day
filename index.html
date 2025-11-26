@@ -3,65 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <title>NextGen Workshop - Learning Journal</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #eef7ff;
+            margin: 0;
             padding: 40px;
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(135deg, #a0e8ff, #ffc8e7, #d6ffb7);
+            background-size: 300% 300%;
+            animation: gradientShift 12s ease infinite;
         }
+
+        @keyframes gradientShift {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
         h1 {
-            color: #0057b8;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
         }
+
         .day-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.7);
             padding: 25px;
-            margin-top: 25px;
-            border-radius: 12px;
-            max-width: 800px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            margin: 25px auto;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            max-width: 900px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            transition: 0.3s ease;
         }
-        ul { 
-            line-height: 1.8; 
+
+        .day-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
         }
+
+        h2 {
+            color: #ff4fa2;
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #0077ff;
+            margin-top: 18px;
+        }
+
+        h4 {
+            color: #ff7b00;
+        }
+
+        ul {
+            line-height: 1.9;
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
         .date {
-            color: #777;
+            color: #444;
             font-size: 14px;
+            margin-top: -10px;
             margin-bottom: 10px;
+        }
+
+        /* Cute section divider */
+        .divider {
+            height: 5px;
+            background: linear-gradient(to right, #ff4fa2, #ffc800, #6bff79, #00c3ff);
+            border-radius: 30px;
+            margin: 30px auto;
+            width: 80%;
+        }
+
+        /* Interactive heading effect */
+        h2:hover {
+            color: #ff006a;
+            transform: scale(1.03);
+            transition: 0.2s;
         }
     </style>
 </head>
+
 <body>
 
-    <h1>NextGen Workshop - Learning Journal</h1>
+    <h1>🌟 NextGen Workshop - Learning Journal 🌟</h1>
 
     <!-- DAY 1 -->
     <div class="day-card">
         <h2>Day 1 - Full Stack & SDLC</h2>
         <p class="date">Date: {{YESTERDAY_DATE}}</p>
 
-        <h3>What is Full-Stack Development?</h3>
+        <h3>✨ What is Full-Stack Development?</h3>
         <p>Full-stack development means working on both the front-end and back-end of a website or web app.</p>
 
-        <h4>Front-End</h4>
+        <h4>🎨 Front-End</h4>
         <ul>
             <li>User Interface (what the user sees)</li>
             <li>HTML, CSS, JavaScript, React</li>
         </ul>
 
-        <h4>Back-End</h4>
+        <h4>⚙️ Back-End</h4>
         <ul>
             <li>Server-side logic</li>
             <li>Node.js, Express.js</li>
             <li>Databases like MongoDB</li>
         </ul>
 
-        <h4>Full-Stack Developer</h4>
+        <h4>👩‍💻 Full-Stack Developer</h4>
         <p>A developer who can build both the UI and the backend of an application.</p>
 
-        <h3>SDLC - Software Development Life Cycle</h3>
+        <div class="divider"></div>
+
+        <h3>💡 SDLC - Software Development Life Cycle</h3>
         <p>SDLC is the step-by-step process used to build software correctly and efficiently.</p>
 
-        <h4>Phases of SDLC</h4>
+        <h4>🌀 Phases of SDLC</h4>
         <ul>
             <li><strong>Requirement Analysis:</strong> Understanding what needs to be built.</li>
             <li><strong>Planning:</strong> Time, cost, tools, and team planning.</li>
@@ -72,30 +137,34 @@
         </ul>
     </div>
 
+    <div class="divider"></div>
+
     <!-- DAY 2 -->
     <div class="day-card">
         <h2>Day 2 - Version Control, Git & GitHub</h2>
         <p class="date">Date: {{TODAY_DATE}}</p>
 
-        <h3>What is Version Control?</h3>
-        <p>Version control helps developers track changes, save different versions of a project, and avoid losing work.</p>
+        <h3>🔄 What is Version Control?</h3>
+        <p>Version control lets developers track code changes, store versions, and avoid losing work.</p>
 
-        <h3>What is Git?</h3>
-        <p>Git is a tool used to track changes in code, manage versions, create commits, and work safely on projects.</p>
+        <h3>🐙 What is Git?</h3>
+        <p>Git is a tool to track changes, commit updates, create branches, and manage code safely.</p>
 
-        <h3>What is GitHub?</h3>
-        <p>GitHub is an online platform where people upload Git-based projects, collaborate, create branches, and store code.</p>
+        <h3>☁️ What is GitHub?</h3>
+        <p>GitHub is a cloud platform where developers store Git repositories and collaborate.</p>
 
-        <h3>How Git & GitHub Help a Team of 5 Developers</h3>
+        <h3>🤝 How Git & GitHub Help a Team of 5 Developers</h3>
         <ul>
-            <li>All team members can work on the same project at the same time</li>
-            <li>No one’s code gets overwritten</li>
-            <li>Branches help each person work on separate features</li>
-            <li>Merging combines everyone’s work smoothly</li>
-            <li>GitHub stores the project online safely</li>
+            <li>Everyone can work on the same project together</li>
+            <li>No code overwriting</li>
+            <li>Branches help developers work separately</li>
+            <li>Merging combines final work</li>
+            <li>Safe storage of project online</li>
         </ul>
 
-        <h3>Today's Goals</h3>
+        <div class="divider"></div>
+
+        <h3>🎯 Today's Goals</h3>
         <ul>
             <li>Create GitHub account</li>
             <li>Install Git</li>
